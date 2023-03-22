@@ -1,11 +1,20 @@
 <script setup>
-import useTitle from './components/useTitle.vue'
+import useTitle from "./components/useTitle.vue";
+import useClipboard from "./components/useClipboard.vue";
 </script>
 
 <template>
-
-  <useTitle />
+	<useTitle />
+	<hr />
+	<useClipboard />
 </template>
 
-<style scoped>
+<style>
+hr {
+	margin-block: 1rem;
+}
+label {
+	display: block;
+	text-align: left;
+}
 </style>
