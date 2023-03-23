@@ -5,11 +5,14 @@ const thisTitle = useTitle();
 
 console.log(thisTitle.value);
 
-thisTitle.value = "Kof tov";
-
+thisTitle.value = "Abu Kof";
 </script>
 
 <template>
-	<h1>Yo</h1>
-	<input type="text" v-model="thisTitle" />
+	<label for="page-title">Page title:</label>
+	<input type="text" id="page-title" v-model="thisTitle" />
 </template>
+
+<style scoped>
+
+</style>
