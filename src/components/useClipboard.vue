@@ -18,7 +18,7 @@ const { text, copy, copied, isSupported } = useClipboard({ source });
 			<span v-else>Copied!</span>
 		</button>
 		<p>
-			Current copied: <code>{{ text || "none" }}</code>
+			Current copied: <pre>{{ text || "none" }}</pre>
 		</p>
 	</div>
 	<p v-else>Your browser does not support Clipboard API</p>
@@ -29,5 +29,8 @@ div {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+}
+p{
+    margin: 0;
 }
 </style>
