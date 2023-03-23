@@ -13,7 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
+pre{
+  border: 1px solid #1a1a1a;
+  padding: 0.25em;
+  display: block;
+}
 a {
   font-weight: 500;
   color: #646cff;
