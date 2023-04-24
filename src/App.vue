@@ -3,6 +3,7 @@ import useTitle from "./components/useTitle.vue";
 import useClipboard from "./components/useClipboard.vue";
 import useDarkColorMode from "./components/useDarkColorMode.vue";
 import onKeyStroke from "./components/onKeyStroke.vue";
+import useDeviceSensors from "./components/useDeviceSensors.vue";
 </script>
 
 <template>
@@ -11,6 +12,8 @@ import onKeyStroke from "./components/onKeyStroke.vue";
 	<useClipboard />
 	<hr />
 	<useDarkColorMode />
+	<hr />
+	<useDeviceSensors />
 	<hr />
 	<onKeyStroke />
 </template>
