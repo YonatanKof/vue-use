@@ -7,6 +7,7 @@ import useDeviceSensors from "./components/useDeviceSensors.vue";
 </script>
 
 <template>
+	<router-view />
 	<useTitle />
 	<hr />
 	<useClipboard />
