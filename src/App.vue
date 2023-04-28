@@ -1,30 +1,31 @@
 <script setup>
-import useTitle from "./components/useTitle.vue";
-import useClipboard from "./components/useClipboard.vue";
-import useDarkColorMode from "./components/useDarkColorMode.vue";
-import onKeyStroke from "./components/onKeyStroke.vue";
-import useDeviceSensors from "./components/useDeviceSensors.vue";
 </script>
 
 <template>
-	<router-view />
-	<useTitle />
-	<hr />
-	<useClipboard />
-	<hr />
-	<useDarkColorMode />
-	<hr />
-	<useDeviceSensors />
-	<hr />
-	<onKeyStroke />
+	<main>
+		<header>
+			<router-link to="/">Home</router-link> | 
+			<router-link to="/use-mouse-and-touch">usePageLeave</router-link> |
+			<router-link to="/use-device-sensors">useBattery, useOnline, useNetwork, useGeolocation</router-link> |
+			<router-link to="/use-title">useTitle</router-link> |
+			<router-link to="/use-clipboard">useClipboard</router-link> |
+			<router-link to="/use-dark-color-mode">useDarkColorMode</router-link> |
+			<router-link to="/on-key-stroke">onKeyStroke</router-link>
+		</header>
+		<section>
+			<router-view />
+		</section>
+	</main>
 </template>
 
 <style>
-hr {
-	margin-block: 1rem;
+main {
+	height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr;
 }
-label {
-	display: block;
-	text-align: left;
+section {
+	text-align: start;
+	padding: 2rem;
 }
 </style>
