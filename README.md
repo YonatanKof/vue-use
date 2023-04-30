@@ -8,3 +8,5 @@
 2. `useClipboard` → copy, paste and whatnot
 3. `useDark`, `useColorMode` & `useToggle` → dark or light mode | change themes
 4. `onKeyStroke`, `useMagicKeys` & `whenever` → to keyboard control + modifier keys
+5. `useBattery`, `useOnline`, `useNetwork` & `useGeolocation` → for device sensors
+6. _WIP:_ `usePageLeave` & `whenever` → for mouse & touch control

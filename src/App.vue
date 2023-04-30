@@ -4,11 +4,11 @@ import Colors from "./components/useDarkColorMode.vue";
 const theseLinks = [
 	{ to: "/", title: "Home" },
 	{ to: "/use-title", title: "Page title" },
-	{ to: "/use-mouse-and-touch", title: "On page leave" },
-	{ to: "/use-device-sensors", title: "Use device sensors" },
 	{ to: "/use-clipboard", title: "Clipboard" },
 	{ to: "/use-dark-color-mode", title: "Dark mode and themes" },
 	{ to: "/on-key-stroke", title: "On key stroke" },
+	{ to: "/use-device-sensors", title: "Use device sensors" },
+	{ to: "/use-mouse-and-touch", title: "On page leave" },
 ];
 </script>
 
