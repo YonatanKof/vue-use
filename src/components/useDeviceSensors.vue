@@ -13,11 +13,11 @@ const geolocation = useGeolocation()
 
 <template>
     <h3>useBattery</h3>
-	<p><pre>isSupported: {{ isSupported }}</pre> Is the device supporting this API.</p>
-	<p><pre>charging: {{ charging }}</pre> If the device is currently charging.</p>
-    <p><pre>chargingTime: {{ chargingTime }}</pre> The number of seconds until the device becomes fully charged.</p>
-    <p><pre>dischargingTime: {{ dischargingTime }}</pre> The number of seconds before the device becomes fully discharged.</p>
-    <p><pre>level: {{ level }}</pre> A number between 0 and 1 representing the current charge level.</p>
+	<p>Is the device supporting this API. <pre>isSupported: {{ isSupported }}</pre></p>
+	<p>If the device is currently charging. <pre>charging: {{ charging }}</pre></p>
+    <p>The number of seconds until the device becomes fully charged. <pre>chargingTime: {{ chargingTime }}</pre></p>
+    <p>The number of seconds before the device becomes fully discharged. <pre>dischargingTime: {{ dischargingTime }}</pre></p>
+    <p>A number between 0 and 1 representing the current charge level. <pre>level: {{ level }}</pre></p>
     <hr>
 	<code>{{ battery }}</code>
     <hr>
@@ -30,3 +30,9 @@ const geolocation = useGeolocation()
     <h3>useGeolocation</h3>
     <pre>{{ geolocation }}</pre>
 </template>
+
+<style scoped>
+p {
+    margin-block-end: 2rem;
+}
+</style>

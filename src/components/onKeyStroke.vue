@@ -16,7 +16,7 @@ onKeyStroke(Object.keys(controls), (e) => {
 });
 
 /**
- * * Add shift modifier 
+ * * Add shift modifier
  */
 whenever(keys.shift_ArrowDown, () => {
 	position.value.y += 10;
@@ -32,7 +32,7 @@ whenever(keys.shift_ArrowLeft, () => {
 });
 
 /**
- * * Add shift+control modifier 
+ * * Add shift+control modifier
  */
 whenever(keys.shift_control_ArrowDown, () => {
 	position.value.y += 100;
@@ -51,14 +51,21 @@ const position = ref({ x: 0, y: 0 });
 </script>
 
 <template>
-	<div class="ball"></div>
+	<div class="space">
+		<div class="ball"></div>
+	</div>
 </template>
 
 <style>
+.space {
+	border: solid 0.125rem salmon;
+	padding: 1rem;
+	border-radius: 0.25em;
+}
 .ball {
 	width: 1rem;
 	height: 1rem;
-	background: red;
+	background: salmon;
 	border-radius: 50%;
 	position: relative;
 	top: v-bind(position.y + "px");
