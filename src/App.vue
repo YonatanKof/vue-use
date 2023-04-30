@@ -1,16 +1,27 @@
 <script setup>
+import Colors from "./components/useDarkColorMode.vue";
+
+const theseLinks = [
+	{ to: "/", title: "Home" },
+	{ to: "/use-title", title: "Page title" },
+	{ to: "/use-mouse-and-touch", title: "On page leave" },
+	{ to: "/use-device-sensors", title: "Use device sensors" },
+	{ to: "/use-clipboard", title: "Clipboard" },
+	{ to: "/use-dark-color-mode", title: "Dark mode and themes" },
+	{ to: "/on-key-stroke", title: "On key stroke" },
+];
 </script>
 
 <template>
 	<main>
 		<header>
-			<router-link to="/">Home</router-link> | 
-			<router-link to="/use-mouse-and-touch">usePageLeave</router-link> |
-			<router-link to="/use-device-sensors">useBattery, useOnline, useNetwork, useGeolocation</router-link> |
-			<router-link to="/use-title">useTitle</router-link> |
-			<router-link to="/use-clipboard">useClipboard</router-link> |
-			<router-link to="/use-dark-color-mode">useDarkColorMode</router-link> |
-			<router-link to="/on-key-stroke">onKeyStroke</router-link>
+			<Colors />
+			<div>
+				<template v-for="(link, index) in theseLinks">
+					<template id="separator" v-if="index > 0"><span>•</span></template>
+					<router-link :to="link.to">{{ link.title }}</router-link>
+				</template>
+			</div>
 		</header>
 		<section>
 			<router-view />
@@ -18,14 +29,14 @@
 	</main>
 </template>
 
-<style>
-main {
-	height: 100vh;
-	display: grid;
-	grid-template-rows: auto 1fr;
+<style lang="scss" scoped>
+span {
+	margin-inline: 0.5rem;
 }
-section {
-	text-align: start;
-	padding: 2rem;
+header {
+	padding-block: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 </style>
