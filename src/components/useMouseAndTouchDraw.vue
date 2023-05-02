@@ -20,7 +20,7 @@ watch(pointer, () => {
 });
 onMounted(() => {
 	canvas.value.style.height = "var(--width-md)";
-	canvas.value.style.width = "var(--width-md)";
+	canvas.value.style.width = "100%";
 	canvas.value.style.backgroundColor = "beige";
 	canvas.value.style.border = "solid brown 2px";
 });

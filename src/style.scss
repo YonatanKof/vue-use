@@ -10,6 +10,7 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
+	word-wrap: anywhere;
 
 	/* color */
 	/* color-scheme: light dark; */
@@ -26,6 +27,7 @@
 	--color-caution: firebrick;
 	--color-success: darkgreen;
 	--color-link: mediumblue;
+
 }
 body {
 	margin: 0;
@@ -36,8 +38,9 @@ body {
 	min-height: 100vh;
 }
 #app {
-	width: var(--width-md);
+	max-width: var(--width-md);
 	display: flex;
+	margin-inline: 2rem;
 }
 main,
 section,
@@ -55,6 +58,7 @@ pre {
 	padding: 0.5em 1rem;
 	margin-block: 0.25em;
 	display: block;
+	white-space: break-spaces;
 }
 a {
 	color: var(--color-link);
@@ -69,7 +73,7 @@ a {
 }
 
 h1 {
-	font-size: 3.2em;
+	font-size: 3rem;
 	line-height: 1.1;
 }
 
@@ -107,7 +111,6 @@ blockquote {
 	padding: 2em;
 }
 
-
 hr {
 	margin-block: 1rem;
 	border: none;
@@ -131,4 +134,14 @@ hr {
 [theme="dim"] {
 	background: gray;
 	color: white;
+}
+
+@media (width <= 30em) {
+	:root {
+		font-size: 20px;
+	}
+	#app {
+		// background-color: rgb(255, 238, 217);
+		margin-inline: 1rem;
+	}
 }
