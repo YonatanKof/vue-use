@@ -6,9 +6,9 @@ const theseLinks = [
 	{ to: "/use-title", title: "Page title" },
 	{ to: "/use-clipboard", title: "Clipboard" },
 	{ to: "/use-dark-color-mode", title: "Dark mode and themes" },
-	{ to: "/on-key-stroke", title: "On key stroke" },
-	{ to: "/use-device-sensors", title: "Use device sensors" },
-	{ to: "/use-mouse-and-touch", title: "On page leave" },
+	{ to: "/on-key-stroke", title: "Key stroke" },
+	{ to: "/use-device-sensors", title: "Device sensors" },
+	{ to: "/use-mouse-and-touch", title: "Mouse & touch" },
 ];
 </script>
 
