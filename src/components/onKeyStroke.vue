@@ -58,14 +58,14 @@ const position = ref({ x: 0, y: 0 });
 
 <style>
 .space {
-	border: solid 0.125rem salmon;
+	border: solid 0.125rem var(--color-caution);
 	padding: 1rem;
 	border-radius: 0.25em;
 }
 .ball {
 	width: 1rem;
 	height: 1rem;
-	background: salmon;
+	background: var(--color-caution);
 	border-radius: 50%;
 	position: relative;
 	top: v-bind(position.y + "px");

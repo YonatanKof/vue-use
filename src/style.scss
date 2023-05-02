@@ -21,6 +21,11 @@
 	--width-md: 800px;
 
 	--border-radius: 0.3em;
+
+	--color-grey-005: hsl(0, 0%, 93%);
+	--color-caution: firebrick;
+	--color-success: darkgreen;
+	--color-link: mediumblue;
 }
 body {
 	margin: 0;
@@ -40,19 +45,19 @@ header {
 	width: 100%;
 }
 code {
-	background-color: hsl(0, 0%, 93%);
+	background-color: var(--color-grey-005);
 	padding: 0.125em 0.25em;
 	border-radius: 0.25em;
 }
 pre {
-	background-color: hsl(0, 0%, 93%);
+	background-color: var(--color-grey-005);
 	border-radius: 0.25rem;
 	padding: 0.5em 1rem;
 	margin-block: 0.25em;
 	display: block;
 }
 a {
-	color: mediumblue;
+	color: var(--color-link);
 	text-decoration: none;
 	&:hover {
 		text-decoration: underline;
@@ -88,6 +93,14 @@ button {
 	&:focus-visible {
 		outline: 4px auto -webkit-focus-ring-color;
 	}
+}
+
+blockquote {
+	background-color: var(--color-grey-005);
+	border-radius: var(--border-radius);
+	margin: 0;
+	padding: 1em;
+	border-inline-start: solid 0.5em var(--color-caution);
 }
 
 .card {

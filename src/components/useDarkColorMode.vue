@@ -37,7 +37,7 @@ const tryMe = true;
 	}
 }
 .active {
-	color: green;
+	color: var(--color-success);
 	font-weight: bold;
 	background-color: bisque;
 }

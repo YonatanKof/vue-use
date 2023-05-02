@@ -9,9 +9,3 @@ const toggleDark = useToggle(isDark);
 	{{ isDark }}
 	<button @click="toggleDark()">Toggle me</button>
 </template>
-<style>
-.dark {
-	background-color: rgb(21, 20, 20);
-	color: antiquewhite;
-}
-</style>
