@@ -16,13 +16,13 @@ const theseLinks = [
 	<main>
 		<header>
 			<Colors />
-			<!-- <div>
+			<div>
 				<template v-for="(link, index) in theseLinks">
 					<template id="separator" v-if="index > 0"><span>•</span></template>
 					<router-link :to="link.to">{{ link.title }}</router-link>
 				</template>
-			</div> -->
-			<div>
+			</div>
+			<!-- <div>
 				<router-link to="/">Home</router-link>
 				<router-link to="/use-title">Page title</router-link>
 				<router-link to="/use-clipboard">Clipboard</router-link>
@@ -30,7 +30,7 @@ const theseLinks = [
 				<router-link to="/on-key-stroke">Key stroke</router-link>
 				<router-link to="/use-device-sensors">Device sensors</router-link>
 				<router-link to="/use-mouse-and-touch">Mouse & touch</router-link>
-			</div>
+			</div> -->
 		</header>
 		<section>
 			<router-view />
