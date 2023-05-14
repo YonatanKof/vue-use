@@ -39,6 +39,6 @@ const tryMe = true;
 .active {
 	color: var(--color-success);
 	font-weight: bold;
-	background-color: bisque;
+	border-color: var(--color-success);
 }
 </style>
