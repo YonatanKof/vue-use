@@ -1,6 +1,5 @@
 <script setup>
 import Colors from './components/useDarkColorMode.vue';
-
 const theseLinks = [
 	{ to: '/', title: 'Home' },
 	{ to: '/use-title', title: 'Page title' },
@@ -9,6 +8,7 @@ const theseLinks = [
 	{ to: '/on-key-stroke', title: 'Key stroke' },
 	{ to: '/use-device-sensors', title: 'Device sensors' },
 	{ to: '/use-mouse-and-touch', title: 'Mouse & touch' },
+	{ to: '/use-change-case', title: 'Change case' },
 ];
 </script>
 
@@ -22,15 +22,6 @@ const theseLinks = [
 					<router-link :to="link.to">{{ link.title }}</router-link>
 				</template>
 			</div>
-			<!-- <div>
-				<router-link to="/">Home</router-link>
-				<router-link to="/use-title">Page title</router-link>
-				<router-link to="/use-clipboard">Clipboard</router-link>
-				<router-link to="/use-dark-color-mode">Dark mode and themes</router-link>
-				<router-link to="/on-key-stroke">Key stroke</router-link>
-				<router-link to="/use-device-sensors">Device sensors</router-link>
-				<router-link to="/use-mouse-and-touch">Mouse & touch</router-link>
-			</div> -->
 		</header>
 		<section>
 			<router-view />
