@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { usePointer } from "@vueuse/core";
 import { ref, reactive, onMounted, watch } from "vue";
 
