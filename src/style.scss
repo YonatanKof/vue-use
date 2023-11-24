@@ -28,7 +28,6 @@
 
 	--border-radius: 0.3em;
 
-
 	color: var(--color-system-100);
 	background-color: var(--color-background-100);
 }
@@ -82,8 +81,9 @@ h1 {
 }
 
 button {
+	--click-depth: 0.25rem;
 	border-radius: var(--border-radius);
-	border: 1px solid transparent;
+	border: 1px solid var(--color-background-070);
 	padding: 0.6em 1.2em;
 	font-size: 1em;
 	font-weight: 500;
@@ -92,12 +92,16 @@ button {
 	cursor: pointer;
 	transition: border-color 0.25s;
 	color: var(--color-system-100);
+	box-shadow: 0 var(--click-depth) 0 var(--color-background-070);
+	transition: all 0.125s;
 	&:hover {
-		border-color: var(--color-system-100);
+		border-color: var(--color-background-070);
 	}
 	&:active {
-		color: var(--color-success);
-		border-color: var(--color-success);
+		border-color: var(--color-system-100);
+		transform: translateY(var(--click-depth));
+		box-shadow: 0 0 0 var(--color-system-100);
+		// box-shadow: unset;
 	}
 	&:focus,
 	&:focus-visible {
@@ -123,27 +127,31 @@ hr {
 	border-bottom: solid 0.125rem var(--color-background-080);
 }
 [theme='cafe'] {
-	--color-background-100: hsl(0, 14%, 81%);
-	--color-background-090: hsl(0, 14%, 71%);
-	--color-background-080: hsl(0, 14%, 61%);
-	--color-background-070: hsl(0, 14%, 51%);
+	--color-system-100: hsl(30, 50%, 15%);
+	--color-background-100: hsl(30, 14%, 81%);
+	--color-background-090: hsl(30, 14%, 71%);
+	--color-background-080: hsl(30, 14%, 61%);
+	--color-background-070: hsl(30, 14%, 51%);
+	--color-link: hsl(219, 80%, 48%);
 }
 
-[theme='dark'] {
-	--color-system-100: white;
-	--color-background-100: black;
-	--color-background-090: hsl(0, 0%, 15%);
-	--color-background-080: hsl(0, 0%, 23%);
-	--color-background-070: hsl(0, 0%, 35%);
-	--color-caution: hsl(0, 100%, 64%);
-	--color-success: hsl(120, 100%, 58%);
-	--color-link: hsl(220, 100%, 68%);
-}
+	[theme='dark'] {
+		--color-system-100: hsl(0, 0%, 90%);
+		--color-background-100: black;
+		--color-background-090: hsl(0, 0%, 15%);
+		--color-background-080: hsl(0, 0%, 23%);
+		--color-background-070: hsl(0, 0%, 35%);
+		--color-caution: hsl(0, 100%, 64%);
+		--color-success: hsl(120, 100%, 58%);
+		--color-link: hsl(220, 100%, 68%);
+	}
 [theme='dim'] {
+	--color-system-100: hsl(0, 0%, 20%);
 	--color-background-100: hsl(0, 0%, 81%);
 	--color-background-090: hsl(0, 0%, 71%);
 	--color-background-080: hsl(0, 0%, 61%);
 	--color-background-070: hsl(0, 0%, 51%);
+	--color-link: hsl(240, 70%, 40%);
 }
 
 @media (width <= 30em) {
