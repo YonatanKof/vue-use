@@ -1,10 +1,12 @@
 <script setup>
-import Colors from './components/useDarkColorMode.vue';
+import Colors from './components/useColorMode.vue';
 const theseLinks = [
 	{ to: '/', title: 'Home' },
 	{ to: '/use-title', title: 'Page title' },
 	{ to: '/use-clipboard', title: 'Clipboard' },
-	{ to: '/use-dark-color-mode', title: 'Dark mode and themes' },
+	{ to: '/use-dark', title: 'Use dark' },
+	{ to: '/use-color-mode', title: 'Color mode' },
+	{ to: '/use-color-mode-2', title: 'Color mode 2' },
 	{ to: '/on-key-stroke', title: 'Key stroke' },
 	{ to: '/use-device-sensors', title: 'Device sensors' },
 	{ to: '/use-mouse-and-touch', title: 'Mouse & touch' },

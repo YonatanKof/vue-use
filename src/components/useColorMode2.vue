@@ -1,21 +1,22 @@
-<script setup>
-import { useDark, useToggle, useColorMode } from "@vueuse/core";
-const isDark = useDark(); // true or false
+<script setup lang="ts">
+import { useColorMode } from "@vueuse/core";
+
 const colorMode = useColorMode({
+	// Uncomment if you'de like to use auto
+	// emitAuto: true,
 	modes: {
 		dim: "dim",
 		cafe: "cafe",
 	},
 	attribute: "theme",
-}); // 'light' or 'dark'
-const toggleDark = useToggle(isDark);
-const tryMe = true;
+});
 </script>
 
 <template>
 	<div>
-		<!-- <pre>{{ colorMode }}</pre> -->
+		<pre>{{ colorMode }}</pre>
 		<span class="group-buttons">
+			<!-- <button :class="{ active: colorMode === 'auto' }" @click="colorMode = 'auto'">System</button> -->
 			<button :class="{ active: colorMode === 'dark' }" @click="colorMode = 'dark'">Dark</button>
 			<button :class="{ active: colorMode === 'light' }" @click="colorMode = 'light'">Light</button>
 			<button :class="{ active: colorMode === 'dim' }" @click="colorMode = 'dim'">Dim</button>
