@@ -2,6 +2,7 @@
 import Colors from './components/useColorMode.vue';
 const theseLinks = [
 	{ to: '/', title: 'Home' },
+	{ to: '/form', title: 'Contact Me!' },
 	{ to: '/use-title', title: 'Page title' },
 	{ to: '/use-clipboard', title: 'Clipboard' },
 	{ to: '/use-dark', title: 'Use dark' },
