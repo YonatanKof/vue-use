@@ -10,7 +10,6 @@
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
 			id="contact-form"
-			action="/success"
 		>
 			<div class="hidden">
 				<label> Don’t fill this out if you’re human: <input name="bot-field" /> </label>
