@@ -1,16 +1,43 @@
+<script setup lang="ts"></script>
+
 <template>
-	<div>
-		<h1>Form</h1>
-		<form name="contact" netlify>
-			<p>
-				<label>Name <input type="text" name="name" /></label>
-			</p>
-			<p>
-				<label>Email <input type="email" name="email" /></label>
-			</p>
-			<p>
-				<button type="submit">Send</button>
-			</p>
+	<div class="wrapper">
+		<h1>Send form</h1>
+		<form
+			name="contact-form"
+			method="POST"
+			netlify
+			data-netlify="true"
+			data-netlify-honeypot="bot-field"
+			id="contact-form"
+			action="/success"
+		>
+			<div class="hidden">
+				<label> Don’t fill this out if you’re human: <input name="bot-field" /> </label>
+			</div>
+			<input type="hidden" name="form-name" value="contact-form" />
+			<div>
+				<label for="name" class="label"> Your Name </label>
+				<input type="text" name="name" id="name" placeholder="What is your name?" class="field" required />
+			</div>
+			<div>
+				<label for="email" class="label"> Your Email </label>
+				<input type="email" name="email" id="email" placeholder="What is your email?" class="field" required />
+			</div>
+			<div>
+				<label for="message" class="label"> Your Message </label>
+				<textarea rows="4" name="message" id="message" placeholder="What do you want to talk about?" class="field" />
+			</div>
+			<div>
+				<button type="submit">Send message</button>
+				<button type="reset">Clear</button>
+			</div>
 		</form>
 	</div>
 </template>
+
+<style scoped>
+.hidden {
+	visibility: hidden;
+}
+</style>

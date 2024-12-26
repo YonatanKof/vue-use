@@ -6,6 +6,7 @@ const router = createRouter({
 		// add pages here
 		{ path: "/", name: "index", component: () => import("./views/index.vue") },
 		{ path: "/form", name: "form", component: () => import("./views/form.vue") },
+		{ path: "/success", name: "success", component: () => import("./views/success.vue") },
 		{ path: "/use-title", name: "use-title", component: () => import("./views/use-title.vue") },
 		{ path: "/use-clipboard", name: "use-clipboard", component: () => import("./views/use-clipboard.vue") },
 		{ path: "/use-dark", name: "use-dark", component: () => import("./views/use-dark.vue") },
