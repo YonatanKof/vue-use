@@ -3,8 +3,8 @@
 <template>
 	<div class="wrapper">
 		<h1>Send form</h1>
-		<form name="contact-form" method="POST" data-netlify="true">
-			<input type="hidden" name="form-name" value="contact-form" />
+		<form name="contact-me" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact-me" />
 			<div>
 				<label for="name" class="label"> Your Name </label>
 				<input type="text" name="name" id="name" placeholder="What is your name?" class="field" required />
@@ -15,8 +15,7 @@
 			</div>
 			<div>
 				<label for="message" class="label"> Your Message </label>
-				<textarea rows="4" name="message" id="message" placeholder="What do you want to talk about?" class="field">
-				</textarea>
+				<textarea rows="4" name="message" id="message" placeholder="What do you want to talk about?" class="field" ></textarea>
 			</div>
 			<div>
 				<button type="submit">Send message</button>
