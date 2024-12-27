@@ -3,17 +3,7 @@
 <template>
 	<div class="wrapper">
 		<h1>Send form</h1>
-		<form
-			name="contact-form"
-			method="POST"
-			netlify
-			data-netlify="true"
-			data-netlify-honeypot="bot-field"
-			id="contact-form"
-		>
-			<div class="hidden">
-				<label> Don’t fill this out if you’re human: <input name="bot-field" /> </label>
-			</div>
+		<form name="contact-form" method="POST" data-netlify="true">
 			<input type="hidden" name="form-name" value="contact-form" />
 			<div>
 				<label for="name" class="label"> Your Name </label>
